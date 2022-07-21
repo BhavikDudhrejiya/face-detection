@@ -26,17 +26,6 @@ def detect_face_part(image_input):
     face_part = image[y:y+h, x:x+w]
     return face_part
 
-# def get_face_box(image, face_part):
-#     img = plt.imread(image)
-#     plt.imshow(img)
-#     ax = plt.gca()
-#     x, y, width, height = face_part[0], face_part[1], face_part[2], face_part[3]
-#     rect = Rectangle((x, y), width, height, fill=False, color='lime',alpha=1,in_layout=False,lw = 2)
-#     ax.add_patch(rect)
-#     plt.axis('off')
-#     plt.show()
-#     plt.savefig('temp2.jpg')
-
 def resize_and_convert(img, target_size=(224,224), grayscale=False):
     if grayscale == True:
         img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)

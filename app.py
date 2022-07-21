@@ -1,6 +1,5 @@
 import imp
 import streamlit as st
-import cv2
 from PIL import Image
 from func import detect_age, detect_emotion, detect_face_part, detect_gender, detect_race
 

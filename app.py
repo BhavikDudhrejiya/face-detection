@@ -2,7 +2,7 @@ import imp
 import streamlit as st
 import cv2
 from PIL import Image
-from func import *
+from func import detect_age, detect_emotion, detect_face_part, detect_gender, detect_race
 
 st.title('Face Attributes Detections')
 
@@ -11,9 +11,6 @@ image_input = st.file_uploader('Upload image:')
 if image_input is not None:
     with open('temp.jpg','wb') as f:
         f.write(image_input.read())
-
-# face_part = detect_face_part('temp.jpg')
-# image_box = get_face_box('temp.jpg', face_part)
 
 emotion = detect_emotion('temp.jpg')
 age = detect_age('temp.jpg')
